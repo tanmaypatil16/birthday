@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PurpleVerse | Happy Birthday</title>
+  <meta name="description" content="A premium BTS-inspired birthday experience with cinematic transitions, music, and interactive surprises.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="background" aria-hidden="true">
+    <div class="aurora aurora-a"></div>
+    <div class="aurora aurora-b"></div>
+    <div class="stars" id="stars"></div>
+    <div class="floating-hearts">
+      <span>&hearts;</span>
+      <span>&hearts;</span>
+      <span>&hearts;</span>
+      <span>&hearts;</span>
+      <span>&hearts;</span>
+    </div>
+    <div class="shooting-stars" id="shootingStars"></div>
+  </div>
+
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+  <button id="musicBtn" class="music-toggle" type="button" aria-pressed="false">
+    <span class="music-icon">&#9834;</span>
+    <span class="music-label">♫ Music</span>
+  </button>
+
+  <main id="app">
+    <section id="landing" class="page active">
+      <div class="landing-board">
+        <div class="book-shell" id="bookShell" role="button" tabindex="0" aria-label="Open the scrapbook">
+          <div class="book-cover">
+            <div class="book-spine"></div>
+            <div class="book-front">
+              <p class="eyebrow">BTS Scrapbook</p>
+              <h1 class="hero-heading">Happy Birthday,<br><span>Saisha 💜</span></h1>
+              <p class="handwritten-subtitle">A tiny BTS universe made especially for your day.</p>
+              <div class="button-row">
+                <button id="enterBtn" class="scrapbook-button" type="button">
+                  Open Scrapbook
+                  <span class="button-arrow">→</span>
+                </button>
+              </div>
+              <p class="book-hint">Click to open</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="coverPage" class="page cover-page">
+      <div id="coverCard" class="cover-card" role="button" tabindex="0" aria-label="Continue to the ticket page">
+        <img src="asscets/icons/front1.png" alt="Birthday front cover artwork">
+      </div>
+    </section>
+
+    <section id="ticket" class="page ticket-page">
+      <div id="ticketBtn" class="ticket-card" role="button" tabindex="0" aria-label="Continue to the next page">
+        <div class="ticket-art" aria-label="Birthday celebration ticket">
+          <img src="asscets/icons/ticket2.png" alt="BTS world tour ticket art">
+        </div>
+      </div>
+    </section>
+
+    <section id="envelopePage" class="page">
+      <div id="envelope" class="envelope" role="button" tabindex="0" aria-label="Open the birthday letter">
+        <div class="envelope-shadow"></div>
+        <div class="letter-preview">
+          <div class="heart-icon">&hearts;</div>
+          <p>Click To Open</p>
+        </div>
+        <div class="flap"></div>
+      </div>
+    </section>
+
+    <section id="letterPage" class="page">
+      <div class="paper">
+        <div class="paper-header">
+          <span class="seal">PurpleVerse</span>
+          <h2>Happy Birthday</h2>
+        </div>
+        <p id="typedText" class="typed-copy" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <section id="galleryPage" class="page">
+      <div class="section-heading">
+        <p class="eyebrow">Memory Album</p>
+        <h2>Beautiful Moments</h2>
+      </div>
+      <div class="collage-board" aria-live="polite">
+        <div class="collage-note">
+          <h3>Happy Birthday</h3>
+          <p>Soft moments, warm smiles, </p>
+        </div>
+        <figure class="collage-item collage-item-a">
+          <img id="galleryImageA" alt="Birthday memory 1">
+        </figure>
+        <figure class="collage-item collage-item-b">
+          <img id="galleryImageB" alt="Birthday memory 2">
+        </figure>
+        <figure class="collage-item collage-item-c">
+          <img id="galleryImageC" alt="Birthday memory 3">
+        </figure>
+        <figure class="collage-item collage-item-d">
+          <img id="galleryImageD" alt="Birthday memory 4">
+        </figure>
+        <div class="collage-heart collage-heart-a">♥</div>
+        <div class="collage-heart collage-heart-b">♥</div>
+      </div>
+      <button id="cakeBtn" class="btn" type="button">Continue</button>
+    </section>
+
+    <section id="cakePage" class="page">
+      <div class="cake-wrapper">
+        <div class="cake-stage" aria-hidden="true">
+          <div class="cake-glow"></div>
+          <div class="cake">
+            <div class="cake-top"></div>
+            <div class="cake-middle"></div>
+            <div class="cake-bottom"></div>
+            <div class="drip drip-1"></div>
+            <div class="drip drip-2"></div>
+            <div class="drip drip-3"></div>
+            <div class="candles">
+              <span><i></i></span>
+              <span><i></i></span>
+              <span><i></i></span>
+              <span><i></i></span>
+              <span><i></i></span>
+            </div>
+          </div>
+        </div>
+        <h1>Make a Wish</h1>
+        <p>
+          Wishing you happiness, health, comfort, success, and countless moments that feel soft and unforgettable.
+        </p>
+        <button id="celebrateBtn" class="btn" type="button">Celebrate</button>
+      </div>
+    </section>
+
+    <section id="giftPage" class="page">
+      <div class="glass gift-card">
+        <p class="eyebrow">A little surprise</p>
+        <h1>Here is your gift</h1>
+        <p>
+          A tiny digital keepsake made just for you, with love and a lot of purple magic.
+        </p>
+        <button id="giftBtn" class="btn" type="button">Open gift</button>
+      </div>
+    </section>
+
+    <section id="finalPage" class="page">
+      <button id="reminderCard" class="reminder-card" type="button" aria-label="Reveal the reminder image">
+        <p class="eyebrow">A little reminder</p>
+        <h2>here something you should never forget:</h2>
+        <p class="reminder-hint">Tap to reveal</p>
+        <div class="reminder-image-wrap">
+          <img src="asscets/icons/tsller.jpg" alt="A reminder image">
+        </div>
+      </button>
+    </section>
+  </main>
+
+  <canvas id="confettiCanvas" aria-hidden="true"></canvas>
+  <audio id="bgMusic" preload="auto" loop></audio>
+  <script src="script.js"></script>
+</body>
+</html>
